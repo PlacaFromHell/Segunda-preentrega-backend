@@ -25,7 +25,8 @@ class productManager {
 
     readProducts = async () => {
         let respuesta = await fs.readFile(this.path, "utf-8");
-        return JSON.parse(respuesta);
+        respuesta = JSON.parse(respuesta);
+        return respuesta;
     }
 
     getProducts = async () => {
@@ -66,6 +67,13 @@ productos.addProduct("producto prueba 2", "Este es un producto de prueba 2", 200
 productos.addProduct("producto prueba 3", "Este es un producto de prueba 3", 200, "Sin imagen", 24, "ABC125"); 
 productos.addProduct("producto prueba 4", "Este es un producto de prueba 4", 200, "Sin imagen", 24, "ABC128"); 
 
+productos.addProduct("Licuadora multifunción", "Ideal para hacer batidos, salsas y purés", 99, "ImagenLicuadora.jpg", 30, "LCB001");
+productos.addProduct("Cámara de acción 4K", "Graba tus aventuras en alta resolución", 199, "ImagenCamara.jpg", 15, "CAM789");
+productos.addProduct("Bicicleta de montaña todo terreno", "Perfecta para explorar senderos naturales", 349, "ImagenBicicleta.jpg", 20, "BIC456");
+productos.addProduct("Smartwatch con GPS", "Mide tu actividad y te guía en tus rutas", 129, "ImagenSmartwatch.jpg", 25, "SWT002");
+productos.addProduct("Set de utensilios de cocina de acero inoxidable", "Todo lo que necesitas para cocinar como un chef", 79, "ImagenUtensilios.jpg", 40, "UTC101");
+productos.addProduct("Set de utensilios de cocina de acero inoxidables", "Todo lo que necesitas para cocinasdasdar como un chef", 79, "ImagenUtensilasdios.jpg", 40, "UTC1021");
+productos.addProduct("producto debugging", "Este es un producto de debugging", 200, "Sin imagen", 24, "ABC13255628"); 
 productos.getProducts()
 
 //productos.getProductsById(1);
